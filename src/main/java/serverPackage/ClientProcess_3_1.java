@@ -21,9 +21,10 @@ public class ClientProcess_3_1 extends Thread {
             BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
 
-            // c) Envoyer à chaque client son numéro d'ordre pw.println("Bienvenue, vous êtes le client n°" + numero);
+            // c) Envoyer à chaque client son numéro d'ordre
+            pw.println("Bienvenue, vous êtes le client n°" + numero);
 
-            // Dialogue indépendant avec ce client (lecture de lignes) String ligne = br.readLine();
+            // Dialogue indépendant avec ce client (lecture de lignes)
             String ligne = br.readLine();
             while (ligne != null && !ligne.equals("quit")) {
                 System.out.println("[client n°" + numero + "] a envoyé : " + ligne);
@@ -35,7 +36,7 @@ public class ClientProcess_3_1 extends Thread {
             System.out.println("Erreur client n°" + numero + " : " + e.getMessage());
         } finally {
             try {
-                socket.close(); // chaque thread ferme SA socket } catch (IOException e) {
+                socket.close(); // chaque thread ferme sa socket
             }catch (IOException e){
             // rien à faire }
             }
