@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 public class Client_3_1 {
     // "localhost" pour les tests locaux ; IP de la machine serveur en réseau (ex : 192.168.1.10)
-    static final String IP_SERVEUR = "localhost";
+    static final String IP_SERVEUR = "192.168.1.40";
     static final int PORT = 1234;
 
     public static void main(String[] args) {
